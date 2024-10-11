@@ -1,0 +1,86 @@
+/* =========================mobile=========================== */
+@media (min-width: 360px) and (max-width: 979.98px) {
+  .nav-desktop {
+    display: none;
+  }
+}
+/*============================== Desktop============================ */
+@media (min-width: 980px) {
+  /* header */
+  .navbar {
+    display: none;
+  }
+  .header-name {
+    display: none;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  #navbar-list_desktop {
+    display: flex;
+  }
+
+  .nav-desktop a {
+    padding: 10px 30px;
+    color: #3f2214;
+  }
+  .nav-desktop a.order-link {
+    background-color: #f8c52c;
+    color: #3f2214;
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 25px;
+  }
+  .nav-desktop a.order-link:hover {
+    font-weight: 900;
+    font-style: italic;
+  }
+  .nav-desktop #btn-home {
+    font-weight: bold;
+  }
+  .hero-button {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  .hero-link {
+    width: 200px;
+  }
+  /* main */
+  .about .container {
+    flex-direction: row;
+  }
+  .info-about {
+    padding-right: 30px;
+    margin: 30px;
+  }
+  .info-menu {
+    padding-right: 30px;
+    margin: 30px;
+  }
+  /* footer */
+  .body-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .form-contact {
+    width: 500px;
+  }
+  .header-contact {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  /* ====page-menu==== */
+  .main-menu .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .wp-block {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,374 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  margin: 0 3rem;
+  padding: 2rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 38px;
+  padding-bottom: 10px;
+  line-height: 50px;
+  font-style: italic;
+  color: #f8c52c;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 15px;
+  color: #f3e8de;
+}
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  /* color: #f3e8de; */
+}
+h4 {
+  font-size: 18px;
+}
+
+/* ====================header=================== */
+
+.header-content {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  background-color: #f3e8de;
+  padding: 10px;
+}
+.header-name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header-name p {
+  font-size: 2rem;
+  color: #3f2214;
+}
+.logo {
+  width: 5%;
+  height: auto;
+}
+
+/* ===navbar=== */
+.icon-navbar {
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: #3f2214;
+  cursor: pointer;
+}
+.overlay-navbar {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  /* overlay hidden */
+  opacity: 0;
+  visibility: hidden;
+}
+/* overlay checked */
+.checkbox:checked ~ .overlay-navbar {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.8s;
+}
+/* navbar content */
+.menu-drawer {
+  position: fixed;
+  background-color: #3f2214;
+  inset: 0 0 0 60%;
+  z-index: 2;
+  transform: translateX(100%);
+  transition: 0.5s;
+}
+.checkbox:checked ~ .menu-drawer {
+  transform: translateX(0);
+}
+.navbar-content {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr;
+}
+#navbar-list_mobile {
+  padding-top: 50px;
+  padding-left: 20px;
+}
+.icon-close-nav {
+  color: #f3e8de;
+  text-align: right;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.navbar-content li {
+  padding-bottom: 15px;
+}
+.navbar-content a {
+  font-size: 20px;
+  display: block;
+  color: #f3e8de;
+}
+.navbar-content a:hover {
+  color: #f8c52c;
+}
+.navbar-content a.order-link {
+  color: #f8c52c;
+  font-weight: 900;
+}
+.navbar-content a.order-link:hover {
+  font-style: italic;
+}
+
+/* ======hero===== */
+.hero {
+  color: #270f04;
+  position: relative;
+  background-color: rgba(29, 16, 3, 0.9);
+  padding: 20px 0;
+}
+.hero::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url(../img/inside_restaurant.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+}
+.hero-box {
+  position: relative;
+  color: #f3e8de;
+  inset: 50% 50%;
+  transform: translate(-50%, 0);
+  width: 90%;
+  padding-top: 90px;
+}
+
+.hero-box .container {
+  text-align: center;
+}
+
+.hero-button {
+  display: grid;
+  justify-content: center;
+  padding: 10px;
+}
+.hero-link {
+  background-color: #f8c52c;
+  color: #3f2214;
+  width: 300px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 25px;
+  margin: 20px;
+}
+.hero-box h2 {
+  font-size: 50px;
+  color: #f8c52c;
+}
+.hero h1 {
+  color: #f3e8de;
+}
+
+/* ===============About============ */
+main .about {
+  background-color: #3f2214;
+  color: #f3e8de;
+}
+
+.info-about {
+  padding: 20px 0;
+}
+.media-about {
+  display: flex;
+  justify-content: center;
+}
+.img-about {
+  width: 100%;
+}
+
+/* =============Menu============== */
+
+.menu {
+  background-color: #f3e8de;
+  padding: 0;
+}
+
+.info-menu {
+  padding: 20px 0;
+}
+.info-menu h1 {
+  color: #3f2214;
+}
+.info-menu p {
+  color: #3f2214;
+}
+.menu-link a {
+  background-color: #f8c52c;
+  color: #3f2214;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  padding: 5px 36px;
+  border-radius: 25px;
+}
+.menu-link {
+  padding: 20px 0;
+}
+.list-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item-img {
+  width: 70%;
+  padding: 10px;
+}
+.item-button {
+  padding: 20px;
+}
+.item-button a {
+  color: #3f2214;
+}
+.item-button :hover {
+  color: #f8c52c;
+  font-size: 25px;
+}
+
+/* ===========footer=========== */
+.contact {
+  background-color: #3f2214;
+  color: #f3e8de;
+}
+.phone-number {
+  color: #f3e8de;
+}
+.fa-solid.fa-phone {
+  padding-right: 10px;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+ul a {
+  color: #f3e8de;
+}
+
+.info-contact .fa-solid {
+  padding: 10px 10px 0 0;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.fa-brands {
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.open-hour h3,
+h4,
+p {
+  padding: 10px 0;
+}
+.open-hour {
+  padding-top: 10px;
+}
+
+.copyright {
+  text-align: center;
+  background-color: #3f2214;
+  color: #f3e8de;
+}
+
+/* ===========================PAGE-MENU================= */
+
+/* hero */
+.header-hero {
+  color: #270f04;
+  padding: 0 0 5rem 0;
+  position: relative;
+  background-color: rgba(29, 16, 3, 0.9);
+  height: 400px;
+}
+.header-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/pho.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  opacity: 0.22;
+}
+.hero-content {
+  position: relative;
+  color: #f3e8de;
+  inset: 50% 0;
+  transform: translate(0, -10%);
+}
+.hero-content .container {
+  text-align: center;
+}
+
+/* main */
+.main-menu .container {
+  display: flex;
+  flex-direction: column;
+}
+.wp-block-heading h2 {
+  font-size: 24px;
+  padding: 10px;
+  background-color: #3f2214;
+  border-radius: 35px;
+  width: 120px;
+  text-align: center;
+  color: #f8c52c;
+}
+.wp-block-content h3 {
+  color: #3f2214;
+}
+.wp-block-content p {
+  color: #3f2214;
+}

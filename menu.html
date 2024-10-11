@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Upptäck hela menyn på Cà Phê Vietnam." />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- embed font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./assets/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./assets/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./assets/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./assets/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./assets/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./assets/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./assets/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./assets/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./assets/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="./assets/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- link to reset.css -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <!-- link to style.css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- link to responsive.css -->
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <title>Meny - Cà Phê Vietnam</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-box">
+        <div class="header-content">
+          <!-- logo -->
+          <img class="logo" src="assets/img/Logo.png" alt="Logo_restaurant" />
+          <!-- Nav mobile -->
+          <!-- name -->
+          <div class="header-name">
+            <p>Cà Phê Vietnam</p>
+          </div>
+
+          <!-- navbar mobile -->
+          <div class="navbar">
+            <!-- icon -->
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="checkbox"
+              class="checkbox"
+              hidden
+            />
+
+            <div class="icon-navbar">
+              <label for="checkbox">
+                <i class="fa-solid fa-bars"></i>
+              </label>
+            </div>
+
+            <!-- overlay -->
+            <label for="checkbox" class="overlay-navbar"></label>
+
+            <!-- navbar -->
+            <div class="menu-drawer">
+              <div class="navbar-content">
+                <!-- navbar content -->
+                <nav>
+                  <ul class="navbar-list" id="navbar-list_mobile">
+                    <li><a id="btn-home" href="./index.html">Hem</a></li>
+                    <li><a href="./menu.html">Meny</a></li>
+                    <li>
+                      <a href="./#footer">Hitta oss</a>
+                    </li>
+                    <li>
+                      <a href="./index.html" class="order-link">Beställ här</a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- icon close -->
+
+                <div class="icon-close-nav">
+                  <label for="checkbox">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-desktop">
+            <ul id="navbar-list_desktop"></ul>
+            <!-- använder js -->
+            <script>
+              const navMobile = document.querySelector("#navbar-list_mobile");
+              const navDesktop = document.querySelector("#navbar-list_desktop");
+              // copy
+              navDesktop.innerHTML = navMobile.innerHTML;
+            </script>
+          </div>
+        </div>
+        <div class="header-hero">
+          <div class="hero-content">
+            <div class="container">
+              <h1>Meny</h1>
+              <p>Upplev vårt varierade utbud av vietnamesisk mat och sushi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main-menu">
+        <div class="container">
+          <section class="wrap-container">
+            <div class="wp-block">
+              <div class="wp-block-heading">
+                <h2>BOWLS</h2>
+              </div>
+              <div class="wp-block-content">
+                <h3 class="heading-text"><strong>Phở</strong> -149kr</h3>
+                <p class="desc-text">
+                  Risnudelsoppa med entrecôte, sous vide biff, böngroddar,
+                  salladslök, silverlök, färska asiatiska örter, chili.
+                </p>
+              </div>
+              <div class="wp-block-content">
+                <h3 class="heading-text">
+                  <strong>Spicy Fried Chicken</strong> -149kr
+                </h3>
+                <p class="desc-text">
+                  Sötstark kyckling, picklade grönsaker, toppad med salladslök,
+                  färska asiatiska örter, chilimajo och chili. Serveras med
+                  jasminris.
+                </p>
+              </div>
+              <div class="wp-block-content">
+                <h3 class="heading-text">
+                  <strong>Beef Stir-Fry</strong> -149kr
+                </h3>
+                <p class="desc-text">
+                  Wok med marinerad biff, picklad rödlök, cucumber, koriander,
+                  chili, rostad lök och hemmajord sås. Serveras med jasminris.
+                </p>
+              </div>
+              <div class="wp-block-content">
+                <h3 class="heading-text">
+                  <strong>Aburi Salmon-don</strong> -149kr
+                </h3>
+                <p class="desc-text">
+                  Eldad lax med avokado, ponzu, gurka, rödkål, marinerat
+                  ägggula, ikura, salladslök.
+                </p>
+              </div>
+              <div class="wp-block-content">
+                <h3 class="heading-text">
+                  <strong>Lemongrass Pork Noodles</strong> -159kr
+                </h3>
+                <p class="desc-text">
+                  Citrongräsmarinerat fläsk med grönsaker, färska asiatiska
+                  örter, cashewnötter och fisksås.Serveras med risnudlar.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="wrap-container">
+            <div class="wp-block">
+              <div class="wp-block-heading">
+                <h2>SUSHI</h2>
+              </div>
+              <div class="wp-block-content">
+                <h3 class="heading-text">
+                  <strong>Golden Cheese Salmon</strong> -159kr
+                </h3>
+                <p class="desc-text">
+                  Lax, avokado, gurka, färskost, toppad med ost och nachos.
+                </p>
+              </div>
+              <div class="wp-block-content">
+                <h3 class="heading-text">
+                  <strong>Volcano Tuna</strong> -169kr
+                </h3>
+                <p class="desc-text">
+                  Marinerad stark tonfisktartar, avokado, gurka, krispig sallad,
+                  toppad med sesam och teriyakisås.
+                </p>
+              </div>
+              <div class="wp-block-content">
+                <h3 class="heading-text">
+                  <strong>Sweet Ebi Fry</strong> -159kr
+                </h3>
+                <p class="desc-text">
+                  Ebi fry, avokado, gurka, krispig sallad, toppad med sesam och
+                  sweet chilimayo.
+                </p>
+              </div>
+              <div class="wp-block-content">
+                <h3 class="heading-text">
+                  <strong>Truffle Unagi</strong> -169kr
+                </h3>
+                <p class="desc-text">
+                  Lax, avokado, gurka, färskost, toppad med unagi, tryffelmajo,
+                  puffat ris.
+                </p>
+              </div>
+              <div class="wp-block-content">
+                <h3 class="heading-text"><strong>Nasu Roll</strong> -149kr</h3>
+                <p class="desc-text">
+                  Marinerad aubergine, tofu, inlagd morot och rädisa, avokado,
+                  gurka.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
